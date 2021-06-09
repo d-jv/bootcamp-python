@@ -13,14 +13,14 @@
 #     round(num) devuelve el valor entero redondeado de num
 
 # Aquí hay un poco de código para comenzar, con algunos casos de prueba y resultados esperados. Prueba cada llamada de función una a la vez y varias veces cada una para asegurarse de obtener el rango correcto.
-# import random
-# def randInt(min=   , max=   ):
-#     num = random.random()
-#     return num
-# #print(randInt()) 		    # debería imprimir un número aleatorio entre 0 a 100
-# #print(randInt(max=50)) 	    # debería imprimir un número aleatorio entre 0 a 50
-# #print(randInt(min=50)) 	    # debería imprimir un número aleatorio entre 50 a 100
-# #print(randInt(min=50, max=500))    # debería imprimir un número aleatorio entre 50 y 500
+import random
+def randInt(min=0, max=100):
+    num = round(random.random()*max+min)
+    return num
+print(randInt()) 		    # debería imprimir un número aleatorio entre 0 a 100
+print(randInt(max=50)) 	    # debería imprimir un número aleatorio entre 0 a 50
+print(randInt(min=50)) 	    # debería imprimir un número aleatorio entre 50 a 100
+print(randInt(min=50, max=500))    # debería imprimir un número aleatorio entre 50 y 500
 
 # BONIFICACIÓN: tenga en cuenta los casos límite (por ejemplo, min> max, max <0)	
 
