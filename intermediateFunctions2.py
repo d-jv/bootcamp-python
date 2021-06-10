@@ -99,10 +99,8 @@ dojo = {
 # Devon
 
 def printInfo(some_dict):
-    countKeys = 0
-    countValues = 0
     for elem in some_dict:
-        print (f'{len(elem)} {elem.upper()}')
+        print (f'\n{len(elem)} {elem.upper()}')
         # print (some_dict[elem])
         for x in some_dict[elem]:
             print (x)
