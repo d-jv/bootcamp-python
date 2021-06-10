@@ -106,6 +106,12 @@ def printInfo(some_dict):
             print (x)
 printInfo(dojo)
 
+def printInfo2(some_dict):
+    for key, values in some_dict.items():
+        print(f'\n{len(values)} {key.upper()}')
+        for value in values:
+            print(value)
+printInfo2(dojo)
 
 # Extra burbuja
 def burbuja(lista):
