@@ -100,7 +100,7 @@ dojo = {
 
 def printInfo(some_dict):
     for elem in some_dict:
-        print (f'\n{len(elem)} {elem.upper()}')
+        print (f'\n{len(some_dict[elem])} {elem.upper()}')
         # print (some_dict[elem])
         for x in some_dict[elem]:
             print (x)
