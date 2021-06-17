@@ -3,18 +3,22 @@ from producto import Producto
 class Tienda:
     def __init__(self, name) -> None:
         self.name = name
-        self.productList = []
+        self.productsList = []
     def add_product (self, new_product):
-        self.productList.append(new_product)
+        self.productsList.append(new_product)
         return self
     def sell_product (self, id):
-        self.productList.pop(id)
+        self.productsList = list(filter(lambda x:x != id, self.productsList)) # Falta llenar aqui
         return self
     def inflation (self, percent_increase):
-        self.price = self.price * (percent_increase+1)
+        for product in self.productsList:
+            product.update_price(percent_increase, True)
+        self
     def set_clearance (self, category, percent_discount):
-        pass
+        for product in self.productsList:
+            if product.category == category:
+                product.update_price(percent_discount, False)
     def vitrina(self):
         print('Productos en vitrina actualmente:')
-        for product in self.productList:
+        for product in self.productsList:
             print(f'- {product}')
