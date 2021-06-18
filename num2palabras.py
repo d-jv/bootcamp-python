@@ -13,7 +13,8 @@ def num2palabras(num):
     elif len(strNum) == 2 and strNum[1] != '0':
         return group2[int(strNum[0])] + ' y ' + group1[int(strNum[1])]
     elif len(strNum) == 3:
-        if strNum[0] == '1' and strNum[1] == '0' and strNum[2] == '0':
+        # if strNum[0] == '1' and strNum[1] == '0' and strNum[2] == '0':
+        if num == 100:
             return 'cien'
         elif int(strNum[1:]) <= 29:
             return group1[int(strNum[0])] + 'cientos' + group1[int(strNum[1:])]
@@ -23,4 +24,4 @@ def num2palabras(num):
             return group1[int(strNum[0])] + 'cientos' + group2[int(strNum[1])] + ' y ' + group1[int(strNum[2])]
 
     else: return 'No implementado'
-print(num2palabras(999))
+print(num2palabras())

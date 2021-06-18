@@ -8,7 +8,8 @@ class Tienda:
         self.productsList.append(new_product)
         return self
     def sell_product (self, id):
-        self.productsList = list(filter(lambda x:x != id, self.productsList)) # Falta llenar aqui
+        # self.productsList = list(filter(lambda x:x != id, self.productsList)) # Falta llenar aqui
+        self.productsList.pop(id)
         return self
     def inflation (self, percent_increase):
         for product in self.productsList:
